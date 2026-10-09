@@ -7,7 +7,7 @@ class TaskIn(BaseModel):
     priority: int = Field(default=1, ge=1, le=5)
 
 
-# Псевдоним для единообразия с CreateUserRequest
+
 CreateTaskRequest = TaskIn
 
 

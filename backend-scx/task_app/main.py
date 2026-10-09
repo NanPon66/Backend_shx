@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Request, Response
 from api.v1 import users_router, tasks_router
 from task_db import Base, engine
-import models  # импорт регистрирует модели в Base.metadata
+import models  
 
-# Автоматическое создание таблиц в PostgreSQL при запуске
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
